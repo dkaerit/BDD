@@ -1,3 +1,3 @@
-# Sesiónd de administardor
+# Sesión de administardor
 
 # Sesión de alu 
