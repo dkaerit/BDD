@@ -127,14 +127,12 @@ exit # saca del subproceso
 13) variales de sustitución
 ```sql
 SQL>
-
-```
-
 select *
 from &tabla; # pediría el nombre de la tabla
 : dual
 
 run # vuelve a pedir el valor del parametro
+```
 
 14) doble &&: si el valor de la variable existe no te pide valor, y si no existe solo te lo pide una vez
 ```sql
