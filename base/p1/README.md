@@ -70,17 +70,95 @@ describe dual
  DUMMY                                              VARCHAR2(1)
 ```
 
+7) Muestra el contenido del buffer de instrucciones
+```sql
+SQL>
+l
+  1* select * from dual
+```
+
+
+8) Lista y ejecuta el contenido del buffer de instrucciones. 
+```sql
+SQL> 
+run / # La barra especifica que solaente lo ejecuta (no lo lista)
+  1* select * from dual
+
+D
+-
+X
+```
+
+
+9) salva el contenido del buffer de instrucciones
+```sql
+SQL>
+save consulta1
+get consulta1
+```
+
+10) Comprueba y Cambia los parametros de visualización de tablas
+```sql
+SQL>
+show linesize # tamaño de línea 
+show pagesize # tamaño de página (14)
+set linesize 130
+set pagesize 20
+```
+
+Para guardar los valores de confguración podría poner los valores en un fichero de configuración que se establezcan al arrancar 
+
+11) Mostrar todos los parámetros
+```sql
+SQL>
+show all
+```
+
+
+12) Permite ejecutar la sentencia del sistema operativo desde sqlplus
+```sql
+SQL>
+host ls
+host # abre un subproceso bash dentro de sqlplus
+exit # saca del subproceso
+```
+
+
+13) variales de sustitución
 ```sql
 SQL>
 
 ```
 
+select *
+from &tabla; # pediría el nombre de la tabla
+: dual
+
+run # vuelve a pedir el valor del parametro
+
+14) doble &&: si el valor de la variable existe no te pide valor, y si no existe solo te lo pide una vez
 ```sql
 SQL>
+select *
+from &&tabla;
 
+SQL>
+run # pide valor
+
+SQL>
+run # ya no pide valor
+
+SQL>
+select *
+from &&tabla
+where &&tabla.dummy='x';
 ```
 
+
+15) Paramos el spool
 ```sql
 SQL>
-
+spool of
+exit # salimos de sqlplus2
+more p1.lst # leer lo que se guardó en el p1
 ```
