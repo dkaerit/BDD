@@ -13,7 +13,7 @@ show user
 ```
 4) Crear usuario alu y dar los permisos correspondientes
 5) Salir de la sesión
-```bash
+```sql
 SQL> 
 create user alu0101014326 
 identified by xxxxx
