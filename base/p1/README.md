@@ -129,7 +129,7 @@ exit # saca del subproceso
 SQL>
 select *
 from &tabla; # pediría el nombre de la tabla
-: dual
+Enter value for tabla: dual
 
 run # vuelve a pedir el valor del parametro
 ```
