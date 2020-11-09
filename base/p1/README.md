@@ -7,12 +7,12 @@ $ ssh alu0101014326@exthost.etsii.ull.es
 $ sqlplus2 administrador 
 ```
 3) Comprobar que eres el administrador
-```sql
+```bash
 SQL> show user
 ```
 4) Crear usuario alu y dar los permisos correspondientes
 5) Salir de la sesión
-```sql
+```bash
 SQL> create user alu0101014326 
 identified by xxxxx
 default tablespace users
